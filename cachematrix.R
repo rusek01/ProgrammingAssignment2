@@ -1,11 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Following functions can be used to offload demanding task of calculating
+## matrix inversion
 
-## Write a short comment describing this function
-## function below was desingned along the lines of makeVector example function
-## i only changet names  from mean to inv, however becouse programers need to be lazy i didnt even change m variable :)
-## so now this function has 4 lets call them methods 1 - to set matrix (and wipe cache), 2 - to return that matrix
-## 3 - to set cache with inverted matrix, and 4 - to get inverted matrix
+## function below creates list object with four methods which can be used
+## to store matrix and its inversion. storing matrix clears inversion, it
+## also provides mean of reading stored values
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -23,7 +21,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## this function checks if matrix has its inversion already, if so it returns
+## it, if now it reads original matrix and sets its inversion
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
